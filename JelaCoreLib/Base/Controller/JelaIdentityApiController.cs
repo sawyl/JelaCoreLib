@@ -35,6 +35,15 @@ namespace JelaCoreLib.Base.Controller
         #region Helpers
 
         /// <summary>
+        /// Get ID of the logged in user if present. Otherwise returns null.
+        /// </summary>
+        /// <returns>Returns ID of the logged in user.</returns>
+        protected string GetUserID()
+        {
+            return _userManager.GetUserId(HttpContext.User);
+        }
+
+        /// <summary>
         /// Get username of the logged in user if present. Otherwise returns null.
         /// </summary>
         /// <returns>Returns username of the logged in user.</returns>
